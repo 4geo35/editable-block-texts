@@ -17,7 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger("textable_id")->nullable();
             $table->string("textable_type")->nullable();
 
-            $table->text("text")->nullable();
+            $table->string("title")->nullable();
+            $table->text("description")->nullable();
             $table->dateTime("use_markdown")->nullable();
 
             $table->unsignedBigInteger("priority")->default(0);

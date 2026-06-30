@@ -2,16 +2,18 @@
 
 namespace GIS\EditableBlockTexts\Models;
 
+use GIS\EditableBlockTexts\Interfaces\BlockTextModelInterface;
 use GIS\TraitsHelpers\Traits\ShouldMarkdown;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
-class BlockText extends Model
+class BlockText extends Model implements BlockTextModelInterface
 {
     use ShouldMarkdown;
 
     protected $fillable = [
-        "text",
+        "title",
+        "description",
         "use_markdown",
     ];
 

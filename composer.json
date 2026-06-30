@@ -1,0 +1,28 @@
+{
+    "name": "4geo35/editable-block-texts",
+    "description": "Additional texts block",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir",
+            "email": "aweram-team@yandex.ru"
+        }
+    ],
+    "require": {
+        "4geo35/tailwindcss-theme": "@dev",
+        "4geo35/user-management": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "GIS\\EditableBlockTexts\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GIS\\EditableBlockTexts\\EditableBlockTextsServiceProvider"
+            ]
+        }
+    }
+}

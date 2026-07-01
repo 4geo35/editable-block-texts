@@ -44,6 +44,11 @@
                     <div class="prose prose-sm mt-indent-half">
                         {!! \Illuminate\Support\Str::markdown($description) !!}
                     </div>
+                @else
+                    <div class="text-info">
+                        Ограничение текста <span class="font-semibold">{{ $textConstraint }}</span> символов,
+                        сейчас <span class="font-semibold">{{ mb_strlen($description) }}</span> символов
+                    </div>
                 @endif
             </div>
 

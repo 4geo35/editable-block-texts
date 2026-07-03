@@ -1,7 +1,7 @@
 <div class="card-body px-0 space-y-indent-half">
     @foreach($texts as $item)
         <div class="border-b border-secondary last-of-type:border-b-0">
-            <div class="flex items-start justify-between p-indent-sm space-x-indent">
+            <div class="flex items-start justify-start p-indent-sm space-x-indent">
                 <div class="space-y-indent-half">
                     <div class="flex justify-start">
                         <button type="button" class="btn btn-sm btn-primary px-btn-x-ico rounded-e-none"
@@ -29,7 +29,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="space-y-indent-half">
+                <div class="space-y-indent-half flex-auto">
                     @if ($item->title)
                         <div class="font-semibold text-lg">{{ $item->title }}</div>
                     @endif

@@ -21,16 +21,23 @@ class BlockTextObserver
 
     public function created(BlockTextModelInterface $model): void
     {
-        $model->textable->touch();
+        $this->touchTaxtable($model);
     }
 
     public function updated(BlockTextModelInterface $model): void
     {
-        $model->textable->touch();
+        $this->touchTaxtable($model);
     }
 
     public function deleted(BlockTextModelInterface $model): void
     {
-        $model->textable->touch();
+        $this->touchTaxtable($model);
+    }
+
+    protected function touchTaxtable(BlockTextModelInterface $model): void
+    {
+        if ($model->textable) {
+            $model->textable->touch();
+        }
     }
 }
